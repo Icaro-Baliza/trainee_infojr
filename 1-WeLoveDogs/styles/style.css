@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -7,13 +9,58 @@ body {
     box-sizing: border-box;
     background-color: #FFFFFF;
     color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
 }
 
 .cabecalho{
-    padding: 2.7% 0% 0% 1.5%;
+    padding: 27px 15px;
 }
 
 .cabecalho__menu{
-    display:flex;
+    display: flex;
     justify-content: space-between;
+}
+
+.cabecalho__menu__home {
+    text-decoration: none;
+    font-size: 48px;
+    color:#000000;
+}
+
+.cabecalho__menu__home__love {
+    color: #7ED321;
+}
+
+.cabecalho__menu__links {
+    display: flex;
+    gap: 35px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.cabecalho__menu__links__link {
+    text-decoration: none;
+    color:#000000;
+}
+
+.cabecalho__menu__links__botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid;
+    background: rgba(126, 211, 33, 0.4);
+    border-radius: 15px;
+    width: 151px;
+    width: 151px;
+    height: 40px;
+    left: 1274px;
+    top: 40px;
+}
+
+.cabecalho__menu__links__inscricao {
+    text-decoration: none;
+    color: #1C4701;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
 }

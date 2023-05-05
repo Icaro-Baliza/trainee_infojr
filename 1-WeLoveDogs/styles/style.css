@@ -63,4 +63,41 @@ body {
     color: #1C4701;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
+    font-size: 16px;
+}
+
+.principal {
+    display: flex;
+    justify-content: center;
+}
+
+.principal__conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.principal__conteudo__texto {
+    font-size: 48px;
+}
+
+.principal__conteudo__botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid;
+    background: #7ED321;
+    border-radius: 15px;
+    width: 151px;
+    width: 151px;
+    height: 40px;
+    left: 1274px;
+    top: 40px;
+}
+
+.principal__conteudo__inscricao {
+    text-decoration: none;
+    color: #1C4701;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
 }

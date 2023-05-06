@@ -180,7 +180,9 @@ header{
 }
 
 .blog__main__content__section__division {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .blog__main__content__section__division__title {
@@ -196,4 +198,108 @@ header{
     font-weight: 400;
     font-size: 16px;
     text-align: justify;    
+}
+
+/*Seção destinada a pagina Contato*/
+
+.contact__header__menu__links__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid;
+    background: #7ED321;
+    border-radius: 15px;
+    width: 151px;
+    height: 40px;
+    left: 1274px;
+    top: 40px;
+    cursor: pointer;
+    color: #1C4701;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;    
+}
+
+.contact__main {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__main__title {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 48px;   
+}
+
+.contact__main__content {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact__main__content__form {
+    padding: 4%
+
+}
+
+.contact__main__content__form__div {
+    padding: 0% 0% 5% 0%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+}
+
+.contact__main__content__form__div__label {
+    margin: 0% 5% 0% 0%;
+    display: flex;
+    width: 124px;
+    height: 50px;
+    font-size: 18px;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 700;
+    color:#000000;
+    text-align: center;
+    justify-content: center;
+}
+
+.contact__main__content__form__div__input {
+    padding: 0% 0% 0% 1%;
+    width: 419px;
+    height: 43px;
+    border: 1px solid #9f9f9f;
+    border-radius: 7px;
+}
+
+.contact__main__content__form__div__input::placeholder {
+    font-family: 'Open sans', sans-serif;
+    font-weight: 700;
+    color: #9F9F9F;
+    text-align:start;
+}
+
+.contact__main__content__form__div__textarea {
+    padding: 1% 0% 0% 1%;
+    width: 418px;
+    height: 160px;
+    border-radius: 7px;
+    border: 1px solid #9f9f9f;
+}
+
+.contact__main__content__form__div__textarea::placeholder {
+    font-family: 'Open sans', sans-serif;
+    font-weight: 700;
+    color: #9F9F9F;
+    text-align:start;    
+}
+
+.contact__main__content__form__div__button {
+    width: 141px;
+    height: 42px;
+    background-color: #7ED321;
+    border: 1px solid #7ED321;
+    border-radius: 10px;
+    font-family: 'Open sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1C4701;
 }

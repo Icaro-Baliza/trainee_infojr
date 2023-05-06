@@ -72,7 +72,7 @@ header{
 }
 
 
-/* Secão destinada à página Home */
+/*Secão destinada à página Home*/
 .home__main {
     display: flex;
     justify-content: center;
@@ -116,8 +116,7 @@ header{
     font-size: 18px;
 }
 
-/*Seção destinada à pagina quem-somos*/
-
+/*Seção destinada à pagina quem somos*/
 .about__main {
     display: flex;
     justify-content: center;
@@ -137,6 +136,7 @@ header{
 }
 
 .about__main__content__paragraph {
+    padding: 2%;
     display: flex;
     text-align: justify;
     width: 687px;
@@ -144,4 +144,56 @@ header{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
+}
+
+/*Seção destinada à pagina blog*/
+
+.blog__main {
+    display: flex;
+    justify-content: center;
+    color:#000000;
+}
+
+.blog__main__content {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog__main__content__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+
+}
+
+.blog__main__content__title {
+    display: flex;
+    justify-content: center;
+}
+
+.blog__main__content__section{
+    padding: 5%;
+    display: flex;
+    width: 1084px;
+    height: 252px;
+}
+
+.blog__main__content__section__division {
+
+}
+
+.blog__main__content__section__division__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.blog__main__content__section__division__paragraph {
+    width: 780px;
+    height: 185px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: justify;    
 }

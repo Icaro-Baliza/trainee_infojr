@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 *{
     margin: 0;
@@ -13,6 +13,7 @@ body {
     font-weight: 700;
 }
 
+/* Cabeçalho das páginas */ 
 .cabecalho{
     padding: 27px 15px;
 }
@@ -52,7 +53,6 @@ body {
     background: rgba(126, 211, 33, 0.4);
     border-radius: 15px;
     width: 151px;
-    width: 151px;
     height: 40px;
     left: 1274px;
     top: 40px;
@@ -67,24 +67,26 @@ body {
     text-decoration: none;
 }
 
-.principal {
+
+/* Secão destinada à página Home */
+.home__principal {
     display: flex;
     justify-content: center;
     gap: 60px;
 }
 
-.principal__conteudo {
+.home__principal__conteudo {
     padding: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.principal__conteudo__texto {
+.home__principal__conteudo__texto {
     font-size: 48px;
 }
 
-.principal__conteudo__botao {
+.home__principal__conteudo__botao {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,6 +104,37 @@ body {
     font-size: 18px;
 }
 
-.principal__conteudo__inscricao {
+.home__principal__conteudo__inscricao {
     text-decoration: none;
+}
+
+/*Seção destinada à pagina quem-somos*/
+
+.about__main {
+    display: flex;
+    justify-content: center;
+}
+
+.about__main__content {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__main__content__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+.about__main__content__paragraph {
+    display: flex;
+    text-align: justify;
+    width: 687px;
+    height: 176px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
 }

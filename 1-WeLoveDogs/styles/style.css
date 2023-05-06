@@ -56,24 +56,28 @@ body {
     height: 40px;
     left: 1274px;
     top: 40px;
-}
-
-.cabecalho__menu__links__inscricao {
-    text-decoration: none;
+    cursor: pointer;
     color: #1C4701;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 16px;
 }
 
+.cabecalho__menu__links__inscricao {
+    text-decoration: none;
+}
+
 .principal {
     display: flex;
     justify-content: center;
+    gap: 60px;
 }
 
 .principal__conteudo {
+    padding: 5%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .principal__conteudo__texto {
@@ -87,17 +91,17 @@ body {
     border: 0px solid;
     background: #7ED321;
     border-radius: 15px;
-    width: 151px;
-    width: 151px;
-    height: 40px;
+    width: 220px;
+    height: 51px;
     left: 1274px;
     top: 40px;
-}
-
-.principal__conteudo__inscricao {
-    text-decoration: none;
+    cursor: pointer;
     color: #1C4701;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 18px;
+}
+
+.principal__conteudo__inscricao {
+    text-decoration: none;
 }

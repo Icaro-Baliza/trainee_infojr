@@ -8,44 +8,48 @@
 body {
     box-sizing: border-box;
     background-color: #FFFFFF;
-    color: #000000;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
 }
 
 /* Cabeçalho das páginas */ 
-.cabecalho{
+header{
     padding: 27px 15px;
 }
 
-.cabecalho__menu{
+.header__menu{
     display: flex;
     justify-content: space-between;
 }
 
-.cabecalho__menu__home {
-    text-decoration: none;
+.header__menu__title {
     font-size: 48px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.header__menu__title__link {
+    text-decoration: none;
     color:#000000;
 }
 
-.cabecalho__menu__home__love {
+.header__menu__title__love {
     color: #7ED321;
 }
 
-.cabecalho__menu__links {
+.header__menu__links {
     display: flex;
     gap: 35px;
     font-size: 16px;
     align-items: center;
 }
 
-.cabecalho__menu__links__link {
+.header__menu__links__link {
     text-decoration: none;
     color:#000000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
 }
 
-.cabecalho__menu__links__botao {
+.header__menu__links__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,30 +67,38 @@ body {
     font-size: 16px;
 }
 
-.cabecalho__menu__links__inscricao {
+.header__menu__links__registration {
     text-decoration: none;
 }
 
 
 /* Secão destinada à página Home */
-.home__principal {
+.home__main {
     display: flex;
     justify-content: center;
     gap: 60px;
 }
 
-.home__principal__conteudo {
+.home__main__content {
     padding: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.home__principal__conteudo__texto {
+.home__main__content__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
     font-size: 48px;
 }
 
-.home__principal__conteudo__botao {
+
+.home__main__content__registration {
+    text-decoration: none;
+}
+
+
+.home__main__content__button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,10 +114,6 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 18px;
-}
-
-.home__principal__conteudo__inscricao {
-    text-decoration: none;
 }
 
 /*Seção destinada à pagina quem-somos*/
@@ -136,5 +144,4 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
-
 }

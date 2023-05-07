@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+header{
+    padding: 27px 15px;
+}
+
+.header__menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__menu__title {
+    font-size: 48px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.header__menu__title__link {
+    text-decoration: none;
+    color:#000000;
+}
+
+.header__menu__title__love {
+    color: #7ED321;
+}
+
+.header__menu__links {
+    display: flex;
+    gap: 35px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.header__menu__links__link {
+    text-decoration: none;
+    color:#000000;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+.header__menu__links__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid;
+    background: rgba(126, 211, 33, 0.4);
+    border-radius: 15px;
+    width: 151px;
+    height: 40px;
+    left: 1274px;
+    top: 40px;
+    cursor: pointer;
+    color: #1C4701;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.header__menu__links__registration {
+    text-decoration: none;
+}
+
+

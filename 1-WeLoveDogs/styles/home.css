@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+
+/*Secão destinada à página Home*/
+.home__main {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.home__main__content {
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home__main__content__text {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+}
+
+
+.home__main__content__registration {
+    text-decoration: none;
+}
+
+
+.home__main__content__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid;
+    background: #7ED321;
+    border-radius: 15px;
+    width: 220px;
+    height: 51px;
+    left: 1274px;
+    top: 40px;
+    cursor: pointer;
+    color: #1C4701;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}

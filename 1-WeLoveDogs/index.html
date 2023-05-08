@@ -1,46 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./styles/home.css">
-    <link rel="stylesheet" href="./styles/header.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./styles/home.css">
+        <link rel="stylesheet" href="./styles/header.css">
+    </head>
 
-<body>
-    <header>
-        <nav class="header__menu">
-            <section class="header__menu__title">
-                <a class="header__menu__title__link" href="./index.html">we<span class="header__menu__title__love">love</span>dogs</a>
-            </section>
-            <section class="header__menu__links">
-                <a class="header__menu__links__link" href="./pages/quem-somos.html">QUEM SOMOS</a>
-                <a class="header__menu__links__link" href="./pages/blog.html">BLOG</a>
-                <a class="header__menu__links__registration" href="./pages/contato.html">
-                    <button  class="header__menu__links__button">
+    <body>
+        <header class="header__menu">
+            <a class="header__menu__title" href="./index.html">we<span class="header__menu__title__love">love</span>dogs</a>
+            <nav class="header__menu__links">
+                <a class="header__menu__link" href="./pages/quem-somos.html">QUEM SOMOS</a>
+                <a class="header__menu__link" href="./pages/blog.html">BLOG</a>
+                <a class="header__menu__link" href="./pages/contato.html">
+                    <button  class="header__menu__button">
                         INSCREVER
                     </button>
                 </a>
-            </section>
-        </nav>
-    </header>
-    <main class="home__main">
-        <section class="home__main__content">
-            <div>
-                <p class="home__main__content__text">Junte-se a</p> 
-                <p class="home__main__content__text">comunidade</p>
-                <p class="home__main__content__text">apaixonada</p>    
-                <p class="home__main__content__text">por cachorros</p>
+            </nav>
+        </header>
+        <main class="home__main">
+            <div class="home__main__content">
+                <h1 class="home__main__content__title">Junte-se a comunidade apaixonada por cachorros</h1> 
+                <a class="home__main__content__registration" href="./pages/contato.html">
+                    <button  class="home__main__content__button">Inscrever-se</button>
+                </a>
             </div>
-            <a class="home__main__content__registration" href="./pages/contato.html">
-                <button  class="home__main__content__button">
-                    Inscrever-se
-                </button>
-            </a>
-        </section>
-        <img src="./assets/Figure1.png" alt="imagem de pessoa brincando com cachorro" width="640" height="480">
-    </main> 
-</body>
+            <img src="./assets/Figure1.png" alt="imagem de pessoa brincando com cachorro" width="640" height="480">
+        </main> 
+    </body>
 </html>

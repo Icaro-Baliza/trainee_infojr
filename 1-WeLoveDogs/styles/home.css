@@ -1,55 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    box-sizing: border-box;
-    background-color: #FFFFFF;
-}
 
 /*Secão destinada à página Home*/
 .home__main {
+    margin: 31px 200px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    gap: 60px;
+    align-items: center;
 }
 
 .home__main__content {
-    padding: 5%;
+    width: 371px;
+    height: 351px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin: 80px;
+
 }
 
-.home__main__content__text {
-    font-family: 'Open Sans', sans-serif;
+.home__main__content__title {
     font-weight: 700;
     font-size: 48px;
+    line-height: 65px;
+    width: 340px;
+    height: 234px;
 }
-
-
-.home__main__content__registration {
-    text-decoration: none;
-}
-
 
 .home__main__content__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 0px solid;
-    background: #7ED321;
+    padding: 13px 55px;
+    border: none;
+    background: rgba(126, 211, 33, 0.4);
     border-radius: 15px;
-    width: 220px;
-    height: 51px;
-    left: 1274px;
-    top: 40px;
-    cursor: pointer;
     color: #1C4701;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 18px;
+}
+
+.home__main__content__button:hover {
+    background: #7ED321;
 }

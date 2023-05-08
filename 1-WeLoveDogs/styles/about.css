@@ -1,40 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    box-sizing: border-box;
-    background-color: #FFFFFF;
-}
-
 .about__main {
-    display: flex;
-    justify-content: center;
-}
-
-.about__main__content {
-    padding: 3%;
+    margin: 30px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 .about__main__content__title {
-    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 48px;
+    line-height: 65px;
+    
 }
 
 .about__main__content__paragraph {
-    padding: 2%;
+    margin: 14px;
     display: flex;
     text-align: justify;
     width: 687px;
     height: 176px;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 16px;
+    line-height: 22px;
 }

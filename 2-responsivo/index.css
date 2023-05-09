@@ -3,6 +3,17 @@
     padding: 0;
 }
 
-body{
+html {
+    height: 100%;
     background-color: #BCCDD0;
+    display: flex;
+    justify-content: center;
+
+}
+
+body{
+    margin: 12%;
+    width: 50%;
+    height: 50%;
+    display: flex;  
 }

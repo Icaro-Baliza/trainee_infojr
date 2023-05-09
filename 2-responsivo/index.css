@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Open+Sans&family=Overpass:wght@500&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +14,12 @@ html {
 }
 
 body{
-    margin: 12%;
-    width: 50%;
-    height: 50%;
+    margin: 10%;
+    width: 60%;
+    height: 60%;
     display: flex;  
+}
+
+button:hover {
+    cursor: pointer
 }

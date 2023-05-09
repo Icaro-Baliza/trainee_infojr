@@ -1,34 +1,58 @@
 .card {
     background-color: #DFDFD6;
     border-radius: 0 30px 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-main {
-
-}
-
 
 .card__text {
-
+    margin: 5%
 }
 
 .card__title {
-
+    font-size: 36px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
 }
 
-.card__text {
-
+.card__paragraph {
+    margin: 3% 5% 0 0;
+    font-size: 16px;
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
 
-.card__shar {
-
-
+footer {
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card__perfil {
-
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
 }
 
 .card__information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Overpass', sans-serif;
+    font-weight: 500;
+}
 
+.card__perfil__nome {
+    font-size: 24px;
+}
+
+.card__perfil__data {
+    font-size: 16px;
+}
+
+.card__button {
+    border: none;
+    background-color: #DFDFD6;
 }

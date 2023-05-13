@@ -1,24 +1,25 @@
-.card {
+
+
+.card__content {
     background-color: #DFDFD6;
-    border-radius: 0 30px 30px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .card__text {
-    margin: 5%
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .card__title {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
 }
 
 .card__paragraph {
-    margin: 3% 5% 0 0;
-    font-size: 16px;
+    margin-right: 1rem;
+    font-size: 1rem;
     text-align: justify;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -45,14 +46,72 @@ footer {
 }
 
 .card__perfil__nome {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .card__perfil__data {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .card__button {
     border: none;
     background-color: #DFDFD6;
 }
+
+/*Telefones*/
+@media (max-width: 767px) {
+    .card {
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+    }
+    
+    .card__image {
+        max-width: 100%;
+        width: 350px;
+        height: 202px;
+        object-fit: cover;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .card__content {
+        max-width: 100%;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 0 0 30px 30px;
+    }
+
+}
+
+/*Notebooks/computadores*/
+@media (min-width: 768px) {
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: 492px;
+        max-width: 875px;
+    }
+
+    .card__content{
+        width: auto;
+        height: 100%;
+        border-radius: 0 30px 30px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+ }

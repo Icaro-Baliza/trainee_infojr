@@ -25,8 +25,44 @@
     font-weight: 400;
 }
 
+.card__bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__compartilhar {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.menu {
+    display: none;  
+    margin-right: 5%;  
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #696F5A;
+    width: 230px;
+    height: 44px;
+    border-radius: 15px;
+}
+
+.compartilhar__text {
+    font-family: 'Overpass', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: #DFDFD6;
+}
+
+.compartilhar__button {
+    background-color: #696F5A;
+
+}
+
 footer {
     margin: 5%;
+    margin-top: 1%;
     display: flex;
     justify-content: space-between;
 }
@@ -54,7 +90,6 @@ footer {
 }
 
 .card__button {
-    border: none;
     background-color: #DFDFD6;
 }
 
@@ -86,6 +121,9 @@ footer {
         border-radius: 0 0 30px 30px;
     }
 
+    .menu {
+        height: 34px;
+    }
 }
 
 /*Notebooks/computadores*/

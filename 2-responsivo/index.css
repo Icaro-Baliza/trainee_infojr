@@ -13,6 +13,10 @@ body{
     overflow: scroll; 
 }
 
+button {
+    border: none;
+}
+
 button:hover {
     cursor: pointer
 }

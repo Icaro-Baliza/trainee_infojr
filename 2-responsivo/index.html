@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./index.css">
         <link rel="stylesheet" href="./styles/desktop.css">
+        <script src="./scrypts/index.js"></script>
         <title>desktop</title>
     </head>
     <body>
@@ -16,16 +17,26 @@
                     <h1 class="card__title">Decore sua casa com plantas!</h1>
                     <p class="card__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus at ornare tortor, magna interdum ut. Fringilla tellus neque malesuada ullamcorper. Lacinia interdum sollicitudin sed sit eget sit. Tristique velit gravida aenean nulla. Ut gravida lobortis magnis purus dui. At nibh massa orci, varius auctor cursus commodo. Nisi, non molestie tincidunt posuere leo etiam eu, orci. Consequat diam facilisi neque, est sit. Gravida nibh magna cursus eget eget velit cras.</p>           
                 </main>
-                <footer>
-                    <div class="card__perfil">
-                        <img src="./assets/doguito.png" alt="imagem de cachorro">
-                        <div class="card__information">
-                            <p class="card__perfil__nome">Doguito</p>
-                            <p class="card__perfil__Data">29/09/2022</p>
-                        </div>
+                <div class="card__bottom">
+                    <div class="card__compartilhar">
+                        <menu>
+                            <h3 class="compartilhar__text">S H A R E</h3>
+                            <button class="compartilhar__button"><img src="./assets/icon-facebook.png" alt="icone do facebook"></button>
+                            <button class="compartilhar__button"><img src="./assets/icon-twitter.png" alt="icone do twitter"></button>
+                            <button class="compartilhar__button"><img src="./assets/icon-pinterest.png" alt="icone do pinterest"></button>
+                        </menu>
                     </div>
-                    <button class="card__button"><img src="./assets/share.png"></button>
-                </footer>
+                    <footer>
+                        <div class="card__perfil">
+                            <img src="./assets/doguito.png" alt="imagem de cachorro">
+                            <div class="card__information">
+                                <p class="card__perfil__nome">Doguito</p>
+                                <p class="card__perfil__Data">29/09/2022</p>
+                            </div>
+                        </div>
+                        <button class="card__button" onclick="clickShare()"><img src="./assets/share.png"></button>
+                    </footer>
+                </div>    
             </section>
         </div>
     </body>

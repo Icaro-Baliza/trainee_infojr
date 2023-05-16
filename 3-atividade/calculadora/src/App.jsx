@@ -1,33 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import './calculadora.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="line">
+        <button className="erase">C</button>
+        <button className="operation">( )</button>
+        <button className="operation">%</button>
+        <button className="operation">÷</button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="line">
+        <button className="numbers">7</button>
+        <button className="numbers">8</button>
+        <button className="numbers">9</button>
+        <button className="operation">x</button>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="line">
+        <button className="numbers">4</button>
+        <button className="numbers">5</button>
+        <button className="numbers">6</button>
+        <button className="operation">-</button>
+      </div>
+      <div className="line">
+        <button className="numbers">1</button>
+        <button className="numbers">2</button>
+        <button className="numbers">3</button>
+        <button className="operation">+</button>
+      </div>
+            <div className="line">
+        <button>+/-</button>
+        <button className="numbers">0</button>
+        <button>,</button>
+        <button className="equals">=</button>
+      </div>
+      
     </div>
   )
 }

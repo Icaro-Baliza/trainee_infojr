@@ -1,0 +1,11 @@
+.operation {
+    color: green;
+}
+
+.erase {
+    color: red;
+}
+
+.equals {
+    background-color: green;
+}

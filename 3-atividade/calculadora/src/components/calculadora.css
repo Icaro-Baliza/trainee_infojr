@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family= Noto +Sans:wght@300 & display=swap');
+
+.calculator {
+    display: flex;
+    width: 22em;
+    background-color: black;
+    border-radius: 1.5em;
+    flex-direction: column;
+    padding: 0.5em;
+}
+
+.display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 5em;
+}
+
+
+.line {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.operation {
+    color: green;
+}
+
+.erase {
+    color: red;
+}
+
+.equals {
+    background-color: green;
+}

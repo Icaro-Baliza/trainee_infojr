@@ -56,17 +56,22 @@ export default function Calculator() {
   /*Determina a operação*/ 
   function ClickSymbol(input){
     var symbol = input.target.value
-    /*Caso o úsuario tente digitar sintaxe errada*/
-    if (valueScreen === "" | (verification)){
-      alert("Formato utilizado invalido");
+    if (valueScreen.length>=12) {
+      alert("Numero de digitos maximo alcançado");
     }
-
     else{
-      setValueScreen(valueScreen + symbol);
-      setNumber(acumulator);
-      setAcumulator(0);
-      setOperation(symbol);
-      setVerification(true);
+      /*Caso o úsuario tente digitar sintaxe errada*/
+      if (valueScreen === "" | (verification)){
+        alert("Formato utilizado invalido");
+      }
+
+      else{
+        setValueScreen(valueScreen + symbol);
+        setNumber(acumulator);
+        setAcumulator(0);
+        setOperation(symbol);
+        setVerification(true);
+      }
     }
   }
 
@@ -126,10 +131,19 @@ export default function Calculator() {
       else if (operation === "÷") {
         result = parseFloat(number) / parseFloat(acumulator);
       }
+
+      /*Retorna até 11 casas para nao bugar o display*/
+      if ((result + "").length>=12) {
+        setValueScreen(result.toPrecision(11));
+        setAcumulator(result.toPrecision(11));
+        setVerification(false);
+      }
+      else{
       /*Com estas atribuições é possível utilizar o resultado para outros cálculos*/
       setValueScreen(result);
       setAcumulator(result);
       setVerification(false);
+      }
     }
     /*Não aceita "=" sem ter digitado dois número*/
     else {

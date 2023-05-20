@@ -1,4 +1,4 @@
-import './calculadora.css'
+import './calculator.css'
 import { useState } from 'react'
 
 export default function Calculator() {

@@ -1,13 +1,20 @@
-import "./App.css"
-import Jogo from "./components/Jogo"
+import { Routes, Route } from "react-router-dom"
+import ChooseGameMode  from "./pages/ChooseGameMode"
+import Game from "./pages/Game"
+
+
 
 function App() {
+
   return (
-    <div className="App">
-      <h2>Jogo da Velha</h2>
-      <Jogo />
-    </div>
-  );
+    <>
+      <h1>Jogo da Velha</h1>
+      <Routes>
+        <Route path = "/ChooseGameMode" element={<ChooseGameMode />}/>
+        <Route path = "/Game" element={<Game />}/>
+      </Routes>
+    </>
+  )
 }
 
-export default App;
+export default App

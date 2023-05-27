@@ -35,6 +35,9 @@ const JogoDaVelha: React.FC<JogoDaVelhaProps> = (props) =>{
     }
 
     function playInQuadrant(index: number){
+        if (over) {
+            return;
+        }
         const a = Array.from(squares);
         if (a[index] !== null){
             return;
@@ -46,15 +49,17 @@ const JogoDaVelha: React.FC<JogoDaVelhaProps> = (props) =>{
             setSquares(l);
             setTurn("X");
             setRounds(rounds + 1);
+            if (rounds === 8){
+                setOut("Empate");
+                setOver(true);
+            }
             return;
         }
         setTurn(turn === "X" ? "O" : "X")
         setSquares(a);
-        if (win){
-            setOver(true);
-        }
         setRounds(rounds + 1);
-        if (rounds === 9){
+        if (rounds === 8){
+            setOut("Empate");
             setOver(true);
         }
         return;
@@ -90,11 +95,44 @@ const JogoDaVelha: React.FC<JogoDaVelhaProps> = (props) =>{
         for (let i = 0; i < win.length; i++){
             const [x, y, z] = win[i];
             if (squares[x] === squares[y] && squares[y] === squares[z] && squares[z] !== null){
+                checkWinner();
+                setOver(true);
                 return true;
             }
         }
         return false;
     }
+
+    function checkWinner() {
+        if (turn == "X"){
+            setWinsPlayerOne(winsPlayerOne + 1);
+            setOut("X é o vencedor");
+        }
+        else {
+            setWinsPlayerTwo(winsPlayerTwo + 1);
+            setOut("O é o vencedor");
+        }
+    }
+
+    function nextGame(){
+        setSquares(Array(9).fill(null));
+        setTurn("X");
+        setRounds(0);
+        setOver(false);
+        setOut("Vez do jogador X, ou selecione qual jogador começa");
+    }
+
+    function restart() {
+        setSquares(Array(9).fill(null));
+        setTurn("X");
+        setRounds(0);
+        setOver(false);
+        setWinsPlayerOne(0);
+        setWinsPlayerTwo(0);
+        setOut("Vez do jogador X, ou selecione qual jogador começa");
+    }
+
+
 
     return (
         <div className="grid">
@@ -121,6 +159,10 @@ const JogoDaVelha: React.FC<JogoDaVelhaProps> = (props) =>{
             <div className="placar">
                 <div className="Jogador1">X - {winsPlayerOne}</div>
                 <div className="jogador2">O - {winsPlayerTwo}</div>
+            </div>
+            <div>
+                <button onClick={() => restart()}>Reiniciar</button>
+                <button onClick={() => nextGame()}>Jogar de novo</button>
             </div>
         </div>
     )

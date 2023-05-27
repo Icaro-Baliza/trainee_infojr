@@ -1,0 +1,48 @@
+.grid {
+    padding: 20px;
+}
+
+.line {
+    display: flex;
+}
+
+.quadrant {
+    border: 2px solid;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.O {
+    border: 2px solid;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+    background-color: blue;
+}
+
+.X{
+    border: 2px solid;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-weight: bold;
+    background-color: red;
+}

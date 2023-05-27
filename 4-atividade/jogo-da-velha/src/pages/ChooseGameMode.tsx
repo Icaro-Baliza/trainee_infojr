@@ -4,8 +4,9 @@ export default function ChooseGameMode() {
     return (
         <div>
             <nav>
-                <Link to = "/computer-mode"><button>Jogar contra o computador</button></Link>
-                <Link to = "/friend-mode"><button>Jogar contra um amigo</button></Link>
+                <Link to = "/computer-mode"><button><h2>Jogar contra o computador</h2></button></Link>
+                <Link to = "/friend-mode"><button><h2>Jogar contra um amigo</h2></button></Link>
+                <Link to="/"><button className="button__back">voltar</button></Link>
             </nav>
         </div>
     )

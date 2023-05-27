@@ -1,13 +1,16 @@
 import {Outlet} from "react-router-dom";
+import "./App.css"
 
 function App() {
 
   return (
-    <>
+    <div className="App">
       <h1>Jogo da Velha</h1>
-      <Outlet />
-      <footer>Desenvolvido por Ícaro Fernandes</footer>
-    </>
+      <div className="conteudo">
+        <Outlet />
+      </div>
+      <footer>Desenvolvido por Ícaro Fernadnes</footer>
+    </div>
   )
 }
 

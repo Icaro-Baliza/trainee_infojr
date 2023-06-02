@@ -131,6 +131,9 @@ export default function Calculator() {
       else if (operation === "÷") {
         result = parseFloat(number) / parseFloat(acumulator);
       }
+      else if (operation === "^") {
+        result = parseFloat(number) ** parseFloat(acumulator);
+      }
 
       /*Retorna até 11 casas para nao bugar o display*/
       if ((result + "").length>=12) {
@@ -185,6 +188,7 @@ export default function Calculator() {
         <button className="numbers" onClick={ClickNumber} value={"0"}>0</button>
         <button className="numbers" onClick={ClickNumber} value={"."}>.</button>
         <button className="equals" onClick={Result}>=</button>
+        <button className="operation" onClick={ClickSymbol} value="^">^</button>
       </div>
     </div>
   )

@@ -31,10 +31,10 @@ router.post("/cadastro", async (req, res) => {
     }
 })
 
-router.get("/busca-id/:id", async (req, res) => {
+router.get("/busca-id/:Id", async (req, res) => {
     try{
-        const {id} = req.params;
-        const user = await prisma.user.findUnique({where: {Id: parseInt(id)}});
+        const {Id} = req.params;
+        const user = await prisma.user.findUnique({where: {Id: parseInt(Id)}});
         if (!user){
             return res.json({error: "Id inválido"})
         }
@@ -55,6 +55,24 @@ router.get("/busca-email/:email", async (req, res) => {
         return res.json(user);
     }
     catch (error){
+        return res.json({error})
+    }
+})
+
+router.delete("/deleta-usuario/:Id", async (req, res) => {
+    try{
+        const {Id} = req.params;
+        
+        const user = await prisma.user.findUnique({where: {Id: parseInt(Id)}});
+        if (!user){
+            return res.json({error: "Id inválido"})
+        }
+
+        await prisma.user.delete({ where: {Id: parseInt(Id)}})
+        return res.json({message: "Usuário deletado"})
+
+    }
+    catch(error){
         return res.json({error})
     }
 })

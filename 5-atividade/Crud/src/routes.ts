@@ -59,7 +59,10 @@ router.get("/busca-email/:email", async (req, res) => {
     }
 })
 
-router.put("/atualizar-cadastro/:Id", async (req, res) => {
+
+
+
+router.put("/atualiza-cadastro/:Id", async (req, res) => {
     try{
         const {Id} = req.params;
         const {nome, email, idade, estado, cidade} = req.body; 
@@ -69,6 +72,13 @@ router.put("/atualizar-cadastro/:Id", async (req, res) => {
         if (!user){
             return res.json({error: "Id inválido"})
         }
+
+        user = await prisma.user.findUnique({where: {email}})
+
+        if(user) {
+            return res.json({error: "Email já cadastrado"})
+        }
+
         user = await prisma.user.update({
             where: {Id: parseInt(Id)},
             data: {nome, email, idade, cidade, estado}

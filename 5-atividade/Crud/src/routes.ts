@@ -31,5 +31,27 @@ router.post("/cadastro", async (req, res) => {
     }
 })
 
+router.get("/busca-id/:id", async (req, res) => {
+    try{
+        const {id} = req.params;
+        const user = await prisma.user.findUnique({where: {Id: parseInt(id)}});
+        return res.json(user);
+    }
+    catch (error){
+        return res.json({error})
+    }
+})
+
+router.get("/busca-email/:email", async (req, res) => {
+    try{
+        const {email} = req.params;
+        const user = await prisma.user.findUnique({where: {email}});
+        return res.json(user);
+    }
+    catch (error){
+        return res.json({error})
+    }
+})
+
 
 export{router};

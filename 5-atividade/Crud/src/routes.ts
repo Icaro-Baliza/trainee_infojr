@@ -81,7 +81,7 @@ router.get("/busca-nomes", async (req, res) => {
                 return res.json({error: nome + " não consta no sistema"});
             }
 
-            //Adicionada todos os usuario com nome x na saida
+            //Adicionada todos os usuarios com nome x na saida
             for (let j = 0; j<users.length; j++){
                 saida.push(users[j]);
             }
@@ -119,7 +119,7 @@ router.put("/atualiza-cadastro/:Id", async (req, res) => {
         const {Id} = req.params;
         const {nome, email, idade, estado, cidade} = req.body; 
 
-        //Verifica se existe usuaruio com o Id
+        //Verifica se existe usuario com o Id
         let user = await prisma.user.findUnique({where: {Id: parseInt(Id)}});
         if (!user){
             return res.json({error: "Id inválido"});

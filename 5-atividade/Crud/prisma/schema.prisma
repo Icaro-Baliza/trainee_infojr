@@ -10,8 +10,8 @@ datasource db {
 
 model User {
   Id      Int     @id @default(autoincrement())
-  email   String  @unique
   nome    String
+  email   String  @unique
   idade   Int
   estado  String
   cidade  String

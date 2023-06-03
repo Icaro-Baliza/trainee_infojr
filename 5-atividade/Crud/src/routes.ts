@@ -59,6 +59,25 @@ router.get("/busca-email/:email", async (req, res) => {
     }
 })
 
+router.get("/busca-nomes", async (req, res) => {
+    try{
+        const {lista}= req.body;
+        let saida = []
+        for (let i = 0; i < lista.length; i++){
+            const nome = lista[i];
+            const user = await prisma.user.findFirst({where: {nome}});
+            if (!user){
+                return res.json({error: nome + "não encontrado"})
+            }
+            saida.push(user);
+        }
+        return res.json(saida);
+    }
+    catch(error){
+        return res.json(error);
+    }
+})
+
 router.delete("/deleta-usuario/:Id", async (req, res) => {
     try{
         const {Id} = req.params;

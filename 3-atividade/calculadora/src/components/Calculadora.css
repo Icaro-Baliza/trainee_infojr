@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+}
+button{
+    width: 45px;
+    Height: 45px;
+    font-size: 20px;
+    border: none;
+    margin: 5px;
+    border-radius: 40%;
+}
+button:hover{
+    cursor: pointer;
+}
+.container{
+    max-width: 250px;
+    max-height: 500px;
+    padding-left: 550px;
+    padding-top: 50px;
+}
+.wrapper{
+    
+    background-color:  	#e16389;
+    border-radius: 7%;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.imagem{
+    background-color: #e16389 ;
+    max-width: 150px;
+    max-height: 100px;
+}
+.numeros{
+    background-color:#820263 ;
+    color: white;
+}
+.funcoes{
+    background-color: #fbd8b7  ;
+}
+.operadores{
+    background-color: #095d9a  ;
+    color: white;
+}
+.visor{
+    background-color: white;
+    max-width: 200px;
+    padding-right: 15px;
+    color: #301934;
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    font-size: 36px;
+    border-radius: 20px;
+}

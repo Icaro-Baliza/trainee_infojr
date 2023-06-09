@@ -162,7 +162,6 @@ const JogoDaVelha: React.FC<JogoDaVelhaProps> = (props) =>{
             </div>
             <div className="bottom">
                 <div className="bottom__buttons">
-                    <button className="buttons__restart" onClick={() => restart()}>Reiniciar</button>
                     <button className="buttons__restart" onClick={() => nextGame()}>Jogar de novo</button>
                 </div>
                 <div className="grid">
@@ -182,9 +181,12 @@ const JogoDaVelha: React.FC<JogoDaVelhaProps> = (props) =>{
                         <Quadrant onClick={() => playInQuadrant(8)} value={squares[8]}/>
                     </div>
                 </div>
-                <div className="placar">
-                    <div className="jogador1">X - {winsPlayerOne}</div>
-                    <div className="jogador2">O - {winsPlayerTwo}</div>
+                <div>
+                    <div className="placar">
+                        <div className="jogador1">X - {winsPlayerOne}</div>
+                        <div className="jogador2">O - {winsPlayerTwo}</div>
+                    </div>
+                    <button className="buttons__restart" onClick={() => restart()}>Reiniciar</button>
                 </div>
             </div>
         </div>

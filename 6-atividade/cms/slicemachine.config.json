@@ -1,0 +1,5 @@
+{
+  "repositoryName": "ij-cms-project",
+  "adapter": "@slicemachine/adapter-next",
+  "libraries": ["./slices"]
+}

@@ -1,8 +1,8 @@
 {
-  "id": "blog",
+  "id": "about",
   "type": "SharedSlice",
-  "name": "Posts",
-  "description": "Blog",
+  "name": "About",
+  "description": "About",
   "variations": [
     {
       "id": "default",
@@ -12,39 +12,30 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "postTitle": {
+        "aboutTitle": {
           "type": "StructuredText",
           "config": {
             "label": "Titulo",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "heading3,heading4,heading5,heading6"
+            "single": "heading3"
           }
-        }
-      },
-      "items": {
-        "postText": {
+        },
+        "aboutText": {
           "type": "StructuredText",
           "config": {
             "label": "Texto",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,strong,em,list-item,o-list-item"
+            "single": "paragraph,strong,em"
           }
         },
-        "postImage": {
+        "aboutImage": {
           "type": "Image",
-          "config": {
-            "label": "Imagem",
-            "constraint": { "width": 450, "height": 220 },
-            "thumbnails": []
-          }
-        },
-        "date": {
-          "type": "Timestamp",
-          "config": { "label": "Data do post", "placeholder": "" }
+          "config": { "label": "Imagem", "constraint": {}, "thumbnails": [] }
         }
-      }
+      },
+      "items": {}
     }
   ]
 }

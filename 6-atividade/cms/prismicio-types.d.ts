@@ -5,73 +5,47 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
   [KeyType in keyof T]: T[KeyType];
 };
-/** Content for Home documents */
-interface HomeDocumentData {
+/** Content for page documents */
+interface PageDocumentData {
   /**
-   * Seção do Titulo field in *Home*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.containerTitle[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/group
-   *
-   */
-  containerTitle: prismic.GroupField<
-    Simplify<HomeDocumentDataContainerTitleItem>
-  >;
-  /**
-   * Seção Sobre Nós field in *Home*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.containerAbout[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/core-concepts/group
-   *
-   */
-  containerAbout: prismic.GroupField<
-    Simplify<HomeDocumentDataContainerAboutItem>
-  >;
-  /**
-   * Slice Zone field in *Home*
+   * Slice Zone field in *page*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
-   * - **API ID Path**: home.slices[]
+   * - **API ID Path**: page.slices[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/core-concepts/slices
    *
    */
-  slices: prismic.SliceZone<HomeDocumentDataSlicesSlice>;
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>;
   /**
-   * Meta Description field in *Home*
+   * Meta Description field in *page*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: home.meta_description
+   * - **API ID Path**: page.meta_description
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
    *
    */
   meta_description: prismic.RichTextField;
   /**
-   * Meta Image field in *Home*
+   * Meta Image field in *page*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: home.meta_image
+   * - **API ID Path**: page.meta_image
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/core-concepts/image
    *
    */
   meta_image: prismic.ImageField<never>;
   /**
-   * Meta Title field in *Home*
+   * Meta Title field in *page*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: home.meta_title
+   * - **API ID Path**: page.meta_title
    * - **Tab**: SEO & Metadata
    * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
    *
@@ -79,84 +53,85 @@ interface HomeDocumentData {
   meta_title: prismic.KeyTextField;
 }
 /**
- * Item in Home → Seção do Titulo
+ * Slice for *page → Slice Zone*
  *
  */
-export interface HomeDocumentDataContainerTitleItem {
-  /**
-   * Titulo field in *Home → Seção do Titulo*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.containerTitle[].pageTitle
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  pageTitle: prismic.TitleField;
-  /**
-   * Subtitulo field in *Home → Seção do Titulo*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.containerTitle[].pageSubtitle
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  pageSubtitle: prismic.TitleField;
-}
+type PageDocumentDataSlicesSlice = BlogSlice | AboutSlice | HeroSlice;
 /**
- * Item in Home → Seção Sobre Nós
+ * page document from Prismic
  *
- */
-export interface HomeDocumentDataContainerAboutItem {
-  /**
-   * Titulo field in *Home → Seção Sobre Nós*
-   *
-   * - **Field Type**: Title
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.containerAbout[].aboutTitle
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  aboutTitle: prismic.TitleField;
-  /**
-   * Imagem field in *Home → Seção Sobre Nós*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.containerAbout[].aboutImage
-   * - **Documentation**: https://prismic.io/docs/core-concepts/image
-   *
-   */
-  aboutImage: prismic.ImageField<never>;
-  /**
-   * Texto field in *Home → Seção Sobre Nós*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: home.containerAbout[].aboutText
-   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-   *
-   */
-  aboutText: prismic.RichTextField;
-}
-/**
- * Slice for *Home → Slice Zone*
- *
- */
-type HomeDocumentDataSlicesSlice = BlogSlice;
-/**
- * Home document from Prismic
- *
- * - **API ID**: `home`
+ * - **API ID**: `page`
  * - **Repeatable**: `false`
  * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type HomeDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<Simplify<HomeDocumentData>, "home", Lang>;
-export type AllDocumentTypes = HomeDocument;
+export type PageDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<Simplify<PageDocumentData>, "page", Lang>;
+export type AllDocumentTypes = PageDocument;
+/**
+ * Primary content in About → Primary
+ *
+ */
+interface AboutSliceDefaultPrimary {
+  /**
+   * Titulo field in *About → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.aboutTitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  aboutTitle: prismic.TitleField;
+  /**
+   * Texto field in *About → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.aboutText
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  aboutText: prismic.RichTextField;
+  /**
+   * Imagem field in *About → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about.primary.aboutImage
+   * - **Documentation**: https://prismic.io/docs/core-concepts/image
+   *
+   */
+  aboutImage: prismic.ImageField<never>;
+}
+/**
+ * Default variation for About Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AboutSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *About*
+ *
+ */
+type AboutSliceVariation = AboutSliceDefault;
+/**
+ * About Shared Slice
+ *
+ * - **API ID**: `about`
+ * - **Description**: `About`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type AboutSlice = prismic.SharedSlice<"about", AboutSliceVariation>;
 /**
  * Primary content in Posts → Primary
  *
@@ -198,6 +173,16 @@ export interface BlogSliceDefaultItem {
    *
    */
   postImage: prismic.ImageField<never>;
+  /**
+   * Data do post field in *Posts → Items*
+   *
+   * - **Field Type**: Timestamp
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blog.items[].date
+   * - **Documentation**: https://prismic.io/docs/core-concepts/timestamp
+   *
+   */
+  date: prismic.TimestampField;
 }
 /**
  * Default variation for Posts Slice
@@ -226,6 +211,59 @@ type BlogSliceVariation = BlogSliceDefault;
  *
  */
 export type BlogSlice = prismic.SharedSlice<"blog", BlogSliceVariation>;
+/**
+ * Primary content in Hero → Primary
+ *
+ */
+interface HeroSliceDefaultPrimary {
+  /**
+   * Titulo field in *Hero → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.heroTitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  heroTitle: prismic.TitleField;
+  /**
+   * Subtitulo field in *Hero → Primary*
+   *
+   * - **Field Type**: Title
+   * - **Placeholder**: *None*
+   * - **API ID Path**: hero.primary.heroSubtitle
+   * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+   *
+   */
+  heroSubtitle: prismic.TitleField;
+}
+/**
+ * Default variation for Hero Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Default`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<HeroSliceDefaultPrimary>,
+  never
+>;
+/**
+ * Slice variation for *Hero*
+ *
+ */
+type HeroSliceVariation = HeroSliceDefault;
+/**
+ * Hero Shared Slice
+ *
+ * - **API ID**: `hero`
+ * - **Description**: `Hero`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -235,17 +273,23 @@ declare module "@prismicio/client" {
   }
   namespace Content {
     export type {
-      HomeDocumentData,
-      HomeDocumentDataContainerTitleItem,
-      HomeDocumentDataContainerAboutItem,
-      HomeDocumentDataSlicesSlice,
-      HomeDocument,
+      PageDocumentData,
+      PageDocumentDataSlicesSlice,
+      PageDocument,
       AllDocumentTypes,
+      AboutSliceDefaultPrimary,
+      AboutSliceDefault,
+      AboutSliceVariation,
+      AboutSlice,
       BlogSliceDefaultPrimary,
       BlogSliceDefaultItem,
       BlogSliceDefault,
       BlogSliceVariation,
       BlogSlice,
+      HeroSliceDefaultPrimary,
+      HeroSliceDefault,
+      HeroSliceVariation,
+      HeroSlice,
     };
   }
 }

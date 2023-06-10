@@ -1,0 +1,100 @@
+{
+  "id": "home",
+  "label": "Home",
+  "format": "page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "containerTitle": {
+        "type": "Group",
+        "config": {
+          "label": "Seção do Titulo",
+          "fields": {
+            "pageTitle": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Titulo",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading1"
+              }
+            },
+            "pageSubtitle": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Subtitulo",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading3"
+              }
+            }
+          }
+        }
+      },
+      "containerAbout": {
+        "type": "Group",
+        "config": {
+          "label": "Seção Sobre Nós",
+          "fields": {
+            "aboutTitle": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Titulo",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "heading3"
+              }
+            },
+            "aboutImage": {
+              "type": "Image",
+              "config": {
+                "label": "Imagem",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "aboutText": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Texto",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,strong,em"
+              }
+            }
+          }
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": { "choices": { "blog": { "type": "SharedSlice" } } }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "StructuredText"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": { "height": 1260, "width": 2400 },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      }
+    }
+  }
+}

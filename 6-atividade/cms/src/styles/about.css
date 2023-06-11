@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+.about {
+    min-height: 100vh;
+}
+
+.about__title {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    font-family: 'Righteous', cursive;
+    font-size: 2em;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.about__text {
+    font-size: 1em;
+    width: 500px;
+    text-align: justify;
+}

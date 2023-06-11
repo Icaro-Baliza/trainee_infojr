@@ -12,9 +12,15 @@ export type HeroProps = SliceComponentProps<Content.HeroSlice>;
  */
 const Hero = ({ slice }: HeroProps): JSX.Element => {
   return (
-    <div>
-      <PrismicRichText field={slice.primary.title} />
-      <PrismicRichText field={slice.primary.subtitle} />
+    <div className="hero">
+      <div className="hero__content">
+        <div className="hero__title">
+          <PrismicRichText field={slice.primary.title} />
+        </div>
+        <div className="hero__subtitle">
+          <PrismicRichText field={slice.primary.subtitle} />
+        </div>
+      </div>
     </div>
   );
 };

@@ -14,10 +14,14 @@ export type AboutProps = SliceComponentProps<Content.AboutSlice>;
  */
 const About = ({ slice }: AboutProps): JSX.Element => {
   return (
-    <div>
-      <PrismicRichText field={slice.primary.title} />
-      <div>
-        <PrismicRichText field={slice.primary.text} />
+    <div className="about">
+      <div className="about__title">
+        <PrismicRichText field={slice.primary.title} />
+      </div>
+      <div className="about__content">
+        <div className="about__text">
+          <PrismicRichText field={slice.primary.text} />
+        </div>
         <PrismicNextImage field={slice.primary.image} />
       </div>
     </div>

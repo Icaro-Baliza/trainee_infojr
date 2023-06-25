@@ -1,0 +1,41 @@
+.card {
+    width: 324px;
+    height: 170px;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card__informations {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__favorite {
+    display: flex;
+    gap: 10px;
+}
+
+.pokemon__name {
+    font-size: 24px;
+    letter-spacing: -0.96px;
+    color: #1E293B;
+    margin-bottom: 8px;
+}
+
+.card__types {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pokemon__type {
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 50px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: -0.36px;
+}

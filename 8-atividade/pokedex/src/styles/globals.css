@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  background-color:#FFF;
+}
+
+body{
+  display: flex;
+  max-width: 1080px;
+  padding: 2vw;
+  flex-direction: column;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+}
+
+@media (max-width: 1080px) {
+  body {
+    max-width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    max-width: 425px;
+  }
+}

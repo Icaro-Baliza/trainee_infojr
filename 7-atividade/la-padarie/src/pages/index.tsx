@@ -67,7 +67,7 @@ export default function Home() {
             alt="Logo la padarie"
             width={155}
             height={115}
-          />
+          />  
         </header>
         <main>
           <section className={styles.top}>

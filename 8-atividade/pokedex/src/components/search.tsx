@@ -7,7 +7,7 @@ function Search () {
     }
 
     <>
-        <form>
+        <form onSubmit={searchPokemon}>
             <input type="text" placeholder="Pesquisar pokémon"/>
             <Image src="" alt="Imagem de lupa" width={32} height={32} onClick={() => searchPokemon()}/>
         </form>
